@@ -1,0 +1,11 @@
+@mixin atPad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin atMobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

@@ -1,0 +1,254 @@
+.hero {
+  height: 787px;
+  background-image: url("../assets/images/home-header.png");
+  background-position: center center;
+  background-size: cover;
+
+  &-btn {
+    padding: 6px 12px;
+  }
+
+  &-text {
+    height: 100%;
+  }
+
+  @include atPad {
+    background-image: url("../assets/images/home-header-sm.png");
+  }
+
+  @include atMobile {
+    height: 396px;
+
+    &-title {
+      font-size: 24px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+    }
+  }
+}
+
+.feature {
+  @include atPad {
+    padding-bottom: calc(80px - 24px);
+  }
+
+  @include atMobile {
+    padding-top: 40px;
+    padding-bottom: calc(40px - 24px);
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  &-list {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  &-item {
+    width: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @include atPad {
+      width: 50%;
+      margin-bottom: 24px;
+    }
+
+    @include atMobile {
+      width: 100%;
+    }
+  }
+
+  &-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.classic {
+  @include atMobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  &-list {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    @include atPad {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-item {
+    width: 33.333%;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @include atPad {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include atMobile {
+      width: 100%;
+    }
+  }
+}
+
+.design {
+  background: url("../assets/images/index-bg.png") center center / cover;
+
+  @include atPad {
+    background-image: url("../assets/images/index-bg-sm.png");
+    background-position: center top;
+
+    &-list {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include atMobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-item {
+    width: 50%;
+
+    @include atPad {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.recommend {
+  @include atMobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-list {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    @include atPad {
+      flex-wrap: wrap;
+      margin-bottom: -24px;
+    }
+
+    @include atMobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &-item {
+    width: 25%;
+    min-height: 511px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #00000029;
+
+    @include atPad {
+      width: calc(50% - 24px);
+      margin-bottom: 24px;
+    }
+
+    @include atMobile {
+      width: 100%;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.contactMe {
+  @include atMobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &-title {
+    @include atPad {
+      margin-bottom: 24px;
+    }
+
+    @include atMobile {
+      font-size: 24px;
+    }
+  }
+
+  &-text {
+    @include atPad {
+      font-size: 16px;
+    }
+  }
+
+  &-item:last-child {
+    display: flex;
+    align-items: start;
+
+    @include atMobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-block {
+    width: calc(50% - 24px);
+    margin: 0 auto;
+
+    @include atPad {
+      width: 80%;
+    }
+
+    @include atMobile {
+      width: 100%;
+    }
+  }
+
+  &-form-submit {
+    display: block;
+    width: calc(66.666% - 24px);
+    padding: 16px 0;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include atPad {
+      width: calc(60% - 9.6px);
+    }
+
+    @include atMobile {
+      width: 100%;
+    }
+  }
+}
